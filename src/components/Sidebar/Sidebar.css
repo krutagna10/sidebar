@@ -1,0 +1,23 @@
+.sidebar {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.sidebar__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-block: var(--spacing-300);
+  padding-inline: var(--spacing-200);
+}
+
+.sidebar__nav-link {
+  display: flex;
+  gap: var(--spacing-100);
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar__nav-icon {
+  font-size: var(--fs-300);
+}

@@ -1,0 +1,107 @@
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Font Family */
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Colors */
+  --clr-black: hsl(245, 29%, 9%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Font Sizes */
+  /*  | 15 -> 16 | 16 -> 18 | 20 -> 24 | 24 -> 32 | 32 -> 48 */
+  --fs-100: clamp(0.9375rem, 0.9158rem + 0.1087vi, 1rem);
+  --fs-200: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
+  --fs-300: clamp(1.25rem, 1.163rem + 0.4348vi, 1.5rem);
+  --fs-400: clamp(1.5rem, 1.3261rem + 0.8696vi, 2rem);
+  --fs-500: clamp(2rem, 1.6522rem + 1.7391vi, 3rem);
+
+  /* Spacing */
+  /* 16 -> 18 | 20 -> 24 | 24 -> 32 | 32 -> 48 | 48 -> 80 */
+  --spacing-100: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
+  --spacing-200: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
+  --spacing-300: clamp(1.5rem, 1.3261rem + 0.8696vi, 2rem);
+  --spacing-400: clamp(2rem, 1.6522rem + 1.7391vi, 3rem);
+  --spacing-500: clamp(3rem, 2.3043rem + 3.4783vi, 5rem);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-poppins);
+  place-content: center;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+  position: relative;
+  color: white;
+}
+
+/* Hiding animations */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visually Hidden Utility Class */
+.visually-hidden {
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+}
