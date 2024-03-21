@@ -1,23 +1,28 @@
 .sidebar {
   background-color: var(--clr-black);
   color: var(--clr-white);
-}
-
-.sidebar__nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
   padding-block: var(--spacing-300);
   padding-inline: var(--spacing-200);
+  transition: width 0.3s;
+  width: 4.5rem;
 }
 
-.sidebar__nav-link {
-  display: flex;
-  gap: var(--spacing-100);
-  align-items: center;
+.sidebar--open.sidebar {
+  width: 16rem;
+}
+
+.sidebar__content {
+  --flow-space: var(--spacing-300);
+}
+
+.sidebar__toggle-btn {
+  background: transparent;
+  border: 0;
+  color: var(--clr-white);
   cursor: pointer;
 }
 
-.sidebar__nav-icon {
-  font-size: var(--fs-300);
+.sidebar__link {
+  color: var(--clr-white);
+  transition: all 0.3s ease;
 }
