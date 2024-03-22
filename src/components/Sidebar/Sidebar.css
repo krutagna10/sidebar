@@ -7,8 +7,8 @@
   width: 4.5rem;
 }
 
-.sidebar--open.sidebar {
-  width: 16rem;
+.sidebar.sidebar--open {
+  width: 15rem;
 }
 
 .sidebar__content {
@@ -24,5 +24,13 @@
 
 .sidebar__link {
   color: var(--clr-white);
+}
+
+.sidebar__nav-text {
+  border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
+}
+
+.sidebar__link--nav:hover .sidebar__nav-text {
+  border-bottom: 1px solid white;
 }
